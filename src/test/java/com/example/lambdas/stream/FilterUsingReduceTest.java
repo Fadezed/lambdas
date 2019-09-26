@@ -16,16 +16,25 @@ public class FilterUsingReduceTest {
         assertFiltered(x -> false, Collections.emptyList(), Collections.emptyList());
     }
 
+    /**
+     * 条件始终为true 故集合元素都满足
+     */
     @Test
     public void trueReturnsEverything() {
         assertFiltered((Integer x) -> true, asList(1, 2, 3), asList(1, 2, 3));
     }
 
+    /**
+     * 条件始终为false 故集合元素都被剔除
+     */
     @Test
     public void falseRemovesEverything() {
         assertFiltered((Integer x) -> false, asList(1, 2, 3), Collections.emptyList());
     }
 
+    /**
+     * 筛选满足 x>2 的元素
+     */
     @Test
     public void filterPartOfList() {
         assertFiltered((Integer x) -> x > 2, asList(1, 2, 3), Collections.singletonList(3));

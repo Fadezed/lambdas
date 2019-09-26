@@ -16,11 +16,17 @@ public class MapUsingReduceTest {
         assertMapped(Function.identity(), Collections.emptyList(), Collections.emptyList());
     }
 
+    /**
+     * 元素不变
+     */
     @Test
     public void identityMapsToItself() {
         assertMapped((Integer x) -> x, asList(1, 2, 3), asList(1, 2, 3));
     }
 
+    /**
+     * 集合元素都 +2
+     */
     @Test
     public void incrementingNumbers() {
         assertMapped((Integer x) -> x + 2, asList(1, 2, 3), asList(3, 4, 5));
