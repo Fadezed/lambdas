@@ -76,7 +76,7 @@ public class StreamSample {
     /**
      * 在一个字符串列表找出包含最多小写字母的字符串，空列表返回Optional<String> 对象
      * @param list 字符串集合
-     * @return Optional
+     * @return optional
      */
     private static Optional<String> mostLowercaseString(List<String> list){
         return list.stream().max(Comparator.comparing(StreamSample::countLowercaseLetters));
