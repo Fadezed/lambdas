@@ -1,7 +1,6 @@
 package com.example.lambdas.usage;
 
 import com.example.lambdas.entity.Artist;
-import com.example.lambdas.entity.SampleData;
 
 import java.util.List;
 import java.util.Optional;
