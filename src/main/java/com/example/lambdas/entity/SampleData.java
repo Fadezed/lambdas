@@ -50,7 +50,7 @@ public class SampleData {
     /**
      * With_U
      */
-    public static final Album With_U = new Album("With_U", Collections.singletonList(new Track("intro", 68)), Collections.singletonList(T_O_P));
+    public static final Album WITH_U = new Album("With_U", Collections.singletonList(new Track("intro", 68)), Collections.singletonList(T_O_P));
     /**
      * BIG_BANG
      */
@@ -60,7 +60,8 @@ public class SampleData {
     /**
      * 专辑集合
      */
-    public static List<Album> albumList = asList(MADE_SERIES,With_U,BIG_BANG);
+    public static List<Album> albumList = asList(MADE_SERIES,WITH_U,BIG_BANG);
+
     public static Stream<Artist> threeArtists() {
         return Stream.of(T_O_P, G_DRAGON, BIG_BANG_ARTIST);
     }
